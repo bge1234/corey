@@ -15,7 +15,6 @@ block content
           p= zagat.description
         else 
           p= 'No Description Available'
-        p.rating Rating: 
-      
-        //- -for(var i=0; i<item.rating; i++) 
-          //- img.star(src="images/star.png")
+        p.rating Rating:
+        -for(var i=0; i<zagat.rating; i++) 
+          img.star(src="/images/star.png")
