@@ -10,6 +10,6 @@ block content
         for item in zagat
           div.box
             p.name= item.name
-            img(src="/images/burger.png")
+            img(src="images/" + item.image)
             p.type= item.type + " Cuisine"
             p.location= item.location + ", " + item.state
