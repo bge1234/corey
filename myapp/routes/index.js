@@ -16,6 +16,13 @@ router.get('/', function(req, res, next) {
   })
 });
 
+router.get('/new', function(req, res){
+  res.render('new');
+})
+
+router.post('/new', function(req, res){
+  console.log(req.body)
+})
 
 
 module.exports = router;

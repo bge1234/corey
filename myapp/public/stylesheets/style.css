@@ -62,3 +62,42 @@ img {
   width: 120px;
   height: 120px;
 }
+
+/*forms*/
+.newform {
+  border: 2px solid black;
+  width: 85vw;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  line-height: 50px;
+}
+
+.dropdown {
+  display: block;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-left: 20px;
+}
+
+.submit{
+  float: right;
+  margin-right: 5px;
+}
+
+.cancel {
+  float: right;
+  margin-right: 5px;
+}
+
+input[type="radio"] {
+}
+
+.image {
+  display: inline;
+}

@@ -1,0 +1,50 @@
+extends layout 
+
+block content 
+
+  div.container
+    div.header
+      p.title New Restaurant
+    h1 
+    form.newform(method='POST')
+      div.form-group
+        label(for="name") Name
+        input.form-control(type="text" name="name" id="name" placeholder="Restaurant Name")
+      div.form-group
+        label(for="location") Location
+        input.form-control(type="text" name="location" id="location" placeholder="City")
+      div.form-group.colorme
+        select.dropdown(type="select" name="state" id="state")
+          option(value="AL") Alabama
+          option(value="AK") Alaska
+          option(value="AZ") Arizona
+          option(value="AR") Arkansas
+          option(value="CA") California
+      div.form-group 
+        label(for="type") Cuisine
+        select.dropdown(type="select" name="type" id="type")
+          option(value="Mexican") Mexican
+          option(value="Thai") Thai
+          option(value="American") American
+          option(value="Vietnemese") Vietnemese
+          option(value="Italian") Italian
+      div.form-group
+        p
+          input(type="radio" name="rating" value="1" checked)
+          one 1 
+      div.form-group
+        input(type="radio" name="rating" value="2")
+        two 2
+      div.form-group
+        input(type="radio" name="rating" value="3")
+        three 3
+      div.form-group
+        input(type="radio" name="rating" value="4")
+        four 4 
+        div.form-group
+        label.image(for="image") Image
+        input.image(type="text" name="image")
+      div.form-group
+        textarea.form-control(rows="5" name="description" id='description' placeholder="Keep it brief")
+      a(href="/").cancel Cancel
+      button.submit(type="submit") Submit
