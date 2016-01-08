@@ -1,11 +1,13 @@
 body {
-  padding: 50px;
+  /*padding: 50px;*/
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .container {
-  width: 100vw;
+  width: 95vw;
   height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
@@ -14,13 +16,33 @@ a {
 
 .header {
   background-color: #7EC479;
-  height: 20vh;
-  margin-bottom: 10px;   
+  height: 15vh;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
 }
 
 .title {
-  text-align: center;
-  /*font-size: 50px;*/
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 80vh;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
 }
 
 .box {
@@ -28,6 +50,7 @@ a {
   height: 200px;
   background-color: #E1E1E1;
   border: 3px solid black;
+  margin: 20px;
 }
 
 p {
