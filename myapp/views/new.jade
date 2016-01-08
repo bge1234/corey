@@ -4,9 +4,9 @@ block content
 
   div.container
     div.header
-      p.title New Restaurant
+      p.title #{title}
     form.newform(method='POST')
-      p create restaurant
+      p #{formTitle}
       div.form-group
         label(for="name") Name
         input.form-control(type="text" name="name" id="name" placeholder="Restaurant Name")

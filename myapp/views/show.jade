@@ -18,3 +18,5 @@ block content
         p.rating Rating:
         -for(var i=0; i<zagat.rating; i++) 
           img.star(src="/images/star.png")
+        a(href="/edit/"+ zagat.id).edit Edit
+        a(href="/").delete Delete

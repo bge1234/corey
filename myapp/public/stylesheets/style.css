@@ -137,5 +137,13 @@ label {
 
 .show {
   height: 400px;
-  width: 400px; 
+  width: 400px;
+}
+
+.edit {
+  padding: 10px;
+}
+
+.delete {
+  padding: 10px; 
 }

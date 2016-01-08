@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/new', function(req, res){
-  res.render('new');
+  res.render('new', {title: 'New Restaurant', formTitle: 'create restuarant'});
 })
 
 router.post('/', function(req, res, next){
@@ -41,13 +41,15 @@ router.post('/new', function(req, res){
 
 router.get('/show/:id', function(req, res){
   getZagat().where('id', req.params.id).first().then(function(result){
-    console.log(result);
     res.render('show', {zagat: result})
   });
 });
 
-
-
+router.get('/edit/:id', function(req, res){
+  getZagat().where('id', req.params.id).first().then(function(result){
+    res.render('new', {title:"Edit info for "+ result.name})
+  })
+})
 
 
 
