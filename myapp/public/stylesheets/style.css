@@ -3,8 +3,24 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
 a {
   color: #00B7FF;
+}
+
+.header {
+  background-color: #7EC479;
+  height: 20vh;
+  margin-bottom: 10px;   
+}
+
+.title {
+  text-align: center;
+  /*font-size: 50px;*/
 }
 
 .box {

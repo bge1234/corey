@@ -3,13 +3,35 @@ extends layout
 block content
   div.container
     div.header
-      p gTables
+      p.title gTables
       a(href="#") New Restuarant
-      p #{zagat}
-  //- if zagat
-  div.box
-    p.name Los Tacos
-    img(src="/images/burger.png")
-    p.type Mexican Cuisine
-    p.location Denver, CO *****
+    if zagat
+      for item in zagat
+        div.box
+          p.name= item.name
+          img(src="/images/burger.png")
+          p.type= item.type + " Cuisine"
+          p.location= item.location + ", " + item.state
   
+
+
+      //- if books
+      //-     table.table.table-striped
+      //-      thead
+      //-        tr
+      //-          th Author
+      //-          th Title
+      //-          th Rating
+      //-          th Description
+      //-      tbody
+      //-        for book in books
+      //-          tr
+      //-            td= book.author
+      //-            td: a(href='/books/'+book.id)= book.title
+      //-            td= book.title
+      //-            td= book.rating
+      //-            td= book.description
+      //- 
+      //- 
+      //-    div
+      //-    a(href='/books/new') Add a Book
