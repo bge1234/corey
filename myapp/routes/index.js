@@ -57,5 +57,15 @@ router.post('/edit/:id', function(req, res){
   });
 });
 
+// router.post('/delete/:id', function(req,res){
+//   res.redirect('/')
+// });
+
+
+router.get('/:id/delete', function (req, res) {
+  getZagat().where('id', req.params.id).del().then(function (result) {
+    res.redirect('/');
+  })
+})
 
 module.exports = router;
