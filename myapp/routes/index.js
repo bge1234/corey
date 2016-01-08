@@ -51,7 +51,11 @@ router.get('/edit/:id', function(req, res){
   })
 })
 
-
+router.post('/edit/:id', function(req, res){
+  getZagat().where('id', req.params.id).update(req.body).then(function(result){
+    res.redirect('/');
+  });
+});
 
 
 module.exports = router;
