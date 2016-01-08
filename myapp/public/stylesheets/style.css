@@ -6,3 +6,20 @@ body {
 a {
   color: #00B7FF;
 }
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #E1E1E1;
+  border: 3px solid black;
+}
+
+p {
+  line-height: 2px;
+  padding-left: 5px;
+}
+
+img {
+  width: 120px;
+  height: 120px;
+}
