@@ -13,3 +13,5 @@ block content
             img(src="images/" + item.image)
             p.type= item.type + " Cuisine"
             p.location= item.location + ", " + item.state
+            -for(var i=0; i<item.rating; i++) 
+              img.star(src="images/star.png")

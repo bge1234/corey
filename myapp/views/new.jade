@@ -28,20 +28,19 @@ block content
           option(value="American") American
           option(value="Vietnemese") Vietnemese
           option(value="Italian") Italian
-      div.form-group
-        p
-          input(type="radio" name="rating" value="1" checked)
-          one 1 
-      div.form-group
+      div.form-group.radio
+        input(type="radio" name="rating" value="1" checked)
+        one 1 
+      div.form-group.radio
         input(type="radio" name="rating" value="2")
         two 2
-      div.form-group
+      div.form-group.radio
         input(type="radio" name="rating" value="3")
         three 3
-      div.form-group
+      div.form-group.radio
         input(type="radio" name="rating" value="4")
         four 4 
-        div.form-group
+      div.form-group
         label.image(for="image") Image
         input.image(type="text" name="image")
       div.form-group
