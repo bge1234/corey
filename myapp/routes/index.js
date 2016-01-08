@@ -20,8 +20,23 @@ router.get('/new', function(req, res){
   res.render('new');
 })
 
+router.post('/', function(req, res, next){
+  res.redirect('/')
+});
+
 router.post('/new', function(req, res){
-  console.log(req.body)
+  var items = {
+    name: req.body.name,
+    type: req.body.type,
+    location: req.body.location,
+    rating: req.body.rating,
+    state: req.body.state,
+    image: req.body.image,
+    description: req.body.description
+  }
+  getZagat().insert(items).then(function(results){
+    res.redirect('/')
+  });
 })
 
 
