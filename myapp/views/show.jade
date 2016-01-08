@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  if zagat
+  div.container
+    div.header
+      p= zagat.name
+    div.main
+      div.left
+        img.show(src="/images/" + zagat.image)
+      div.right
+        p= zagat.type + ' Cuisine'
+        p= 'Located in ' + zagat.location + ', ' + zagat.state
+        if zagat.description
+          p= zagat.description
+        else 
+          p= 'No Description Available'
+        p.rating Rating: 
+      
+        //- -for(var i=0; i<item.rating; i++) 
+          //- img.star(src="images/star.png")

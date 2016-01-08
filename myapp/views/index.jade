@@ -9,7 +9,8 @@ block content
       if zagat
         for item in zagat
           div.box
-            p.name= item.name
+            p
+              a(href='/show/' + item.id)= item.name
             img(src="images/" + item.image)
             p.type= item.type + " Cuisine"
             p.location= item.location + ", " + item.state

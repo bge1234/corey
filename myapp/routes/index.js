@@ -37,7 +37,19 @@ router.post('/new', function(req, res){
   getZagat().insert(items).then(function(results){
     res.redirect('/')
   });
-})
+});
+
+router.get('/show/:id', function(req, res){
+  getZagat().where('id', req.params.id).first().then(function(result){
+    console.log(result);
+    res.render('show', {zagat: result})
+  });
+});
+
+
+
+
+
 
 
 module.exports = router;
