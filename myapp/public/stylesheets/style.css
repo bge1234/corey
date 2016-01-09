@@ -10,16 +10,25 @@ body {
   margin-right: auto;
 }
 
-a {
-  color: #00B7FF;
-}
-
 .header {
   background-color: #7EC479;
   min-height: 12vh;
   margin-bottom: 10px;
-  min-width: 600px;
   display: flex;
+}
+
+.lefty {
+  display: flex;
+  float: left;
+  width: 50%;
+  justify-content: flex-end;
+  margin-left: 150px;
+}
+
+.title {
+  display: flex;
+  font-size: 50px;
+  display: block;
 }
 
 .righty {
@@ -30,26 +39,13 @@ a {
   align-items: flex-end;
 }
 
-.lefty {
-  display: flex;
-  float: left;
-  width: 50%;
-  align-items: center;
-  justify-content: flex-end;
-  margin-left: 150px; 
-}
-
 .linky {
   text-decoration: none;
   font-size: 20px;
   color: white;
   display: block;
-}
-
-.title {
-  display: flex;
-  font-size: 50px;
-  display: block;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 .items {
@@ -103,6 +99,14 @@ p.location {
 }
 
 /**********************forms*****************/
+.leftier {
+  display: flex;
+  float: left;
+  width: 50%;
+  justify-content: flex-end;
+  margin-left: 150px;
+}
+
 .newform {
   border: 2px solid black;
   width: 85vw;
@@ -183,4 +187,8 @@ label {
 
 .delete {
   padding: 10px;
+}
+
+a:hover {
+  text-decoration: none;
 }
