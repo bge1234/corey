@@ -9,39 +9,40 @@ block content
       legend #{formTitle}
       div.form-group
         label(for="name") Name
-        input.form-control(type="text" name="name" id="name" placeholder="Restaurant Name")
+        input.form-control(type="text" name="name" id="name" placeholder="" value="#{name}")
       div.form-group
         label(for="location") Location
-        input.form-control(type="text" name="location" id="location" placeholder="City")
+        input.form-control(type="text" name="location" id="location" placeholder="" value="#{location}")
       div.form-group.colorme
         select.dropdown(type="select" name="state" id="state")
-          option(value="AL") Alabama
-          option(value="AK") Alaska
-          option(value="AZ") Arizona
-          option(value="AR") Arkansas
-          option(value="CA") California
-          option(value="CO") Colorado
-          option(value="CT") Connecticut
-          option(value="DE") Deleware
-          option(value="DC") District Of Columbia
-          option(value="FL") Florida
-          option(value="GA") Georgia
-          option(value="HI") Hawaii
-          option(value="ID") Idaho
-          option(value="IL") Illinois
-          option(value="IN") Indiana
-          option(value="IA") Iowa
-          option(value="KS") Kansas
-          option(value="KY") Kentucky
-          option(value="LA") Louisiana
-          option(value="ME") Maine
-          option(value="MD") Maryland
-          option(value="MA") Massachusetts
-          option(value="MI") Michigan
-          option(value="MN") Minnesota
-          option(value="MS") Mississippi
-          option(value="MO") Missouri
-          option(value="MT") Montana
+          option #{state}
+          option(value="AL") AL
+          option(value="AK") AK
+          option(value="AZ") AZ
+          option(value="AR") AR
+          option(value="CA") CA
+          option(value="CO") CO
+          option(value="CT") CT
+          option(value="DE") DE
+          option(value="DC") DC
+          option(value="FL") FL
+          option(value="GA") GA
+          option(value="HI") HI
+          option(value="ID") ID
+          option(value="IL") IL
+          option(value="IN") IN
+          option(value="IA") IA
+          option(value="KS") KS
+          option(value="KY") KY
+          option(value="LA") LA
+          option(value="ME") ME
+          option(value="MD") MD
+          option(value="MA") MA
+          option(value="MI") MI
+          option(value="MN") MN
+          option(value="MS") MS
+          option(value="MO") MO
+          option(value="MT") MT
           option(value="NE") Nebraska
           option(value="NV") Nevada
           option(value="NH") New Hampshire
@@ -90,6 +91,6 @@ block content
         label.image(for="image") Image
         input.image(type="text" name="image")
       div.form-group
-        textarea.form-control(rows="5" name="description" id='description' placeholder="Keep it brief")
+        textarea.form-control(rows="5" name="description" id='description' placeholder="")
       a(href="/").cancel Cancel
       button.submit(type="submit") Submit
