@@ -5,8 +5,8 @@ block content
   div.container
     div.header
       p.title.leftier #{title}
-    form.newform(method='POST')
-      p #{formTitle}
+    fieldset.newform(method='POST')
+      legend #{formTitle}
       div.form-group
         label(for="name") Name
         input.form-control(type="text" name="name" id="name" placeholder="Restaurant Name")

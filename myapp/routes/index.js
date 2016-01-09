@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/new', function(req, res){
-  res.render('new', {title: 'New Restaurant', formTitle: 'create restuarant'});
+  res.render('new', {title: 'New Restaurant', formTitle: 'create restaurant'});
 })
 
 router.post('/', function(req, res, next){
@@ -47,7 +47,7 @@ router.get('/show/:id', function(req, res){
 
 router.get('/edit/:id', function(req, res){
   getZagat().where('id', req.params.id).first().then(function(result){
-    res.render('new', {title:"Edit info for "+ result.name})
+    res.render('new', {title: result.name + ' Info', formTitle: "edit restaurant"})
   })
 })
 
