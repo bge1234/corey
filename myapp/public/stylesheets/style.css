@@ -63,10 +63,14 @@ img {
   height: 120px;
 }
 
+p.location {
+  display: inline;
+}
 .star {
   height: 15px;
   width: 15px;
   float: right;
+  margin-right: 5px; 
 }
 
 /**********************forms*****************/
@@ -145,5 +149,5 @@ label {
 }
 
 .delete {
-  padding: 10px; 
+  padding: 10px;
 }
