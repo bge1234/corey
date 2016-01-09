@@ -3,8 +3,10 @@ extends layout
 block content
   div.container
     div.header
-      p.title gTables
-      a(href="/new") New Restaurant
+      div.lefty
+        p.title gTables
+      div.righty
+        a.linky(href="/new") New Restaurant
     div.items
       if zagat
         for item in zagat

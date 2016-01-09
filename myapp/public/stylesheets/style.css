@@ -16,21 +16,40 @@ a {
 
 .header {
   background-color: #7EC479;
-  height: 15vh;
+  min-height: 12vh;
   margin-bottom: 10px;
+  min-width: 600px;
   display: flex;
 }
 
-.header a {
+.righty {
+  width: 50%;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.lefty {
+  display: flex;
+  float: left;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 150px; 
+}
+
+.linky {
   text-decoration: none;
   font-size: 20px;
   color: white;
+  display: block;
 }
 
 .title {
   display: flex;
-  align-items: center;
   font-size: 50px;
+  display: block;
 }
 
 .items {
@@ -89,6 +108,7 @@ p.location {
   width: 85vw;
   height: 80vh;
   margin: 0 auto;
+  overflow: auto;
 }
 
 label {
@@ -99,6 +119,10 @@ label {
 .dropdown {
   display: block;
   margin-top: 20px;
+}
+
+.cuisine {
+  margin-top: 0;
 }
 
 .form-group {
@@ -121,11 +145,10 @@ label {
 
 .radio {
   display: inline-block;
-    width: 90px;
     height: 20px;
     text-align: center;
     vertical-align: top;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 /***********SHOW PAGE***************/
