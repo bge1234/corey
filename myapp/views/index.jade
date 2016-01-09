@@ -10,8 +10,8 @@ block content
         for item in zagat
           div.box
             p
-              a(href='/show/' + item.id)= item.name
-            img(src="images/" + item.image)
+              a.name(href='/show/' + item.id)= item.name
+            img.foodgroups(src="images/" + item.image)
             p.type= item.type + " Cuisine"
             p.location= item.location + ", " + item.state
             -for(var i=0; i<item.rating; i++) 
