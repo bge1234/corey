@@ -43,33 +43,34 @@ block content
           option(value="MS") MS
           option(value="MO") MO
           option(value="MT") MT
-          option(value="NE") Nebraska
-          option(value="NV") Nevada
-          option(value="NH") New Hampshire
-          option(value="NJ") New Jersey
-          option(value="NM") New Mexico
-          option(value="NY") New York
-          option(value="NC") North Carolina
-          option(value="ND") North Dakota
-          option(value="OH") Ohio
-          option(value="OK") Oklahoma
-          option(value="OR") Oregon
-          option(value="PA") Pennsylvania
-          option(value="RI") Rhode Island
-          option(value="SC") South Carolina
-          option(value="SD") South Dakota
-          option(value="TN") Tennesee
-          option(value="TX") Texas
-          option(value="UT") Utah
-          option(value="VT") Vermont
-          option(value="VA") Virginia
-          option(value="WA") Washington
-          option(value="WV") West Virginia
-          option(value="WI") Wisconsin
-          option(value="WY") Wyoming
+          option(value="NE") NE
+          option(value="NV") NV
+          option(value="NH") NH
+          option(value="NJ") NJ
+          option(value="NM") NM
+          option(value="NY") NY
+          option(value="NC") NC
+          option(value="ND") ND
+          option(value="OH") OH
+          option(value="OK") OK
+          option(value="OR") OR
+          option(value="PA") PA
+          option(value="RI") RI
+          option(value="SC") SC
+          option(value="SD") SD
+          option(value="TN") TN
+          option(value="TX") TX
+          option(value="UT") UT
+          option(value="VT") VT
+          option(value="VA") VA
+          option(value="WA") WA
+          option(value="WV") WV
+          option(value="WI") WI
+          option(value="WY") WY
       div.form-group 
         label(for="type") Cuisine
         select.dropdown.cuisine(type="select" name="type" id="type")
+          option #{type}
           option(value="Mexican") Mexican
           option(value="Thai") Thai
           option(value="American") American
@@ -89,8 +90,8 @@ block content
         four 4 
       div.form-group
         label.image(for="image") Image
-        input.image(type="text" name="image")
+        input.image(type="text" name="image" value="#{image}")
       div.form-group
-        textarea.form-control(rows="5" name="description" id='description' placeholder="")
+        textarea.form-control(rows="5" name="description" id='description' placeholder="") #{description}
       a(href="/").cancel Cancel
       button.submit(type="submit") Submit
