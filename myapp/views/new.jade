@@ -77,21 +77,20 @@ block content
           option(value="Vietnemese") Vietnemese
           option(value="Italian") Italian
       div.form-group.radio
-        input(type="radio" name="rating" value="1" checked)
-        one 1 
+        label.radiolabel(for="rating") Rating 
+          input(type="radio" name="rating" value="1" checked="#{rating}")
       div.form-group.radio
         input(type="radio" name="rating" value="2")
-        two 2
       div.form-group.radio
         input(type="radio" name="rating" value="3")
-        three 3
       div.form-group.radio
         input(type="radio" name="rating" value="4")
-        four 4 
+      div.form-group.radio
+        input(type="radio" name="rating" value="4")
       div.form-group
-        label.image(for="image") Image
+        label.image(for="image") Image 
         input.image(type="text" name="image" value="#{image}")
-      div.form-group
+      div.form-group.radio
         textarea.form-control(rows="5" name="description" id='description' placeholder="") #{description}
       a(href="/").cancel Cancel
       button.submit(type="submit") Submit

@@ -110,7 +110,7 @@ p.location {
 .newform {
   border: 2px solid black;
   width: 85vw;
-  height: 80vh;
+  height: 70vh;
   margin: 0 auto;
   overflow: auto;
 }
@@ -136,11 +136,21 @@ label {
 .submit{
   float: right;
   margin-right: 5px;
+  background: #7EC479;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
 }
 
 .cancel {
   float: right;
   margin-right: 5px;
+  background: #F06C53;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: black;
+  font-size: 11px;
 }
 
 .image {
@@ -153,6 +163,10 @@ label {
     text-align: center;
     vertical-align: top;
     padding-top: 20px;
+}
+
+.radiolabel {
+  line-height: normal;
 }
 
 /***********SHOW PAGE***************/

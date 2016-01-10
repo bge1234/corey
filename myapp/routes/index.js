@@ -47,7 +47,7 @@ router.get('/show/:id', function(req, res){
 
 router.get('/edit/:id', function(req, res){
   getZagat().where('id', req.params.id).first().then(function(result){
-    res.render('new', {title: result.name + ' Info', formTitle: "edit restaurant", name: result.name, location: result.location, state: result.state, type: result.type, image: result.image, description: result.description});
+    res.render('new', {title: result.name + ' Info', formTitle: "edit restaurant", name: result.name, location: result.location, state: result.state, rating: result.rating, type: result.type, image: result.image, description: result.description});
   });
 });
 
