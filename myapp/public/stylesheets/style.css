@@ -1,6 +1,6 @@
 body {
-  /*padding: 50px;*/
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container {
@@ -108,9 +108,6 @@ p.location {
 }
 
 .newform {
-  border: 2px solid black;
-  width: 85vw;
-  height: 70vh;
   margin: 0 auto;
   overflow: auto;
 }
