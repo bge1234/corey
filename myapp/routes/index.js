@@ -16,15 +16,13 @@ router.get('/', function(req, res, next) {
   })
 });
 
+// renders the add a new restaurant form page
 router.get('/new', function(req, res){
   res.render('new', {title: 'New Restaurant', formTitle: 'create restaurant'});
 })
 
-router.post('/', function(req, res, next){
-  res.redirect('/')
-});
-
-router.post('/new', function(req, res){
+// pulls everything into index page
+router.post('/', function(req, res){
   var items = {
     name: req.body.name,
     type: req.body.type,
@@ -47,7 +45,13 @@ router.get('/show/:id', function(req, res){
 
 router.get('/edit/:id', function(req, res){
   getZagat().where('id', req.params.id).first().then(function(result){
-    res.render('new', {title: result.name + ' Info', formTitle: "edit restaurant"});
+    res.render('edit', {title: result.name + ' Info', formTitle: "edit restaurant", zagat: result, description: result.description, rating: result.rating});
+  });
+});
+
+router.get('/new/:id', function(req, res){
+  getZagat().where('id', req.params.id).first().then(function(result){
+    res.render('new', {title: result.name + ' Info', formTitle: "edit restaurant", zagat: result});
   });
 });
 
@@ -63,9 +67,13 @@ router.get('/:id/delete', function (req, res) {
   })
 })
 
-router.get('/edit/', function(req, res) {
-  res.render('/');
-})
+// router.get('/edit/', function(req, res) {
+//   res.render('/');
+// })
+
+// router.post('/', function(req, res, next){
+//   res.redirect('/')
+// });
 
 
 

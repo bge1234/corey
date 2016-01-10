@@ -4,18 +4,19 @@ block content
 
   div.container
     div.header
-      p.title.leftier #{title}
+      p.title.leftier #{title} ducky
     fieldset 
       legend #{formTitle}
-      form.newform(method='post')
+      form.newform(action='/' method='post')
         div.form-group
           label(for="name") Name
-          input.form-control(type="text" name="name" id="name" placeholder="" value="")
+          input.form-control(type="text" name="name" id="name" placeholder="Restaurant Name")
         div.form-group
           label(for="location") Location
-          input.form-control(type="text" name="location" id="location" placeholder="" value="")
+          input.form-control(type="text" name="location" id="location" placeholder="Restaurant Location")
         div.form-group.colorme
           select.dropdown(type="select" name="state" id="state")
+            option select a state
             option(value="AL") AL
             option(value="AK") AK
             option(value="AZ") AZ            
@@ -70,6 +71,7 @@ block content
         div.form-group 
           label(for="type") Cuisine
           select.dropdown.cuisine(type="select" name="type" id="type")
+            option type of cuisine
             option(value="Mexican") Mexican
             option(value="Thai") Thai
             option(value="American") American
@@ -77,7 +79,7 @@ block content
             option(value="Italian") Italian
         div.form-group.radio
           label.radiolabel(for="rating") Rating 
-            input(type="radio" name="rating" value="1")
+            input(type="radio" name="rating" value="1" checked="")
         div.form-group.radio
           input(type="radio" name="rating" value="2")
         div.form-group.radio
@@ -88,9 +90,9 @@ block content
           input(type="radio" name="rating" value="4")
         div.form-group
           label.image(for="image") Image 
-          input.image(type="text" name="image")
+          input.image(type="text" name="image" placeholder="image.png")
         div.form-group.radio
-          textarea.form-control(rows="5" name="description" id='description' placeholder="") #{description}
+          textarea.form-control(rows="5" name="description" id='description' placeholder="add a brief description") #{description}
         div.buttoni
           button.submit(type="submit") Submit
           a(href="/").cancel Cancel
