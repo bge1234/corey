@@ -47,12 +47,12 @@ router.get('/show/:id', function(req, res){
 
 router.get('/edit/:id', function(req, res){
   getZagat().where('id', req.params.id).first().then(function(result){
-    res.render('new', {title: result.name + ' Info', formTitle: "edit restaurant", name: result.name, location: result.location, state: result.state, rating: result.rating, type: result.type, image: result.image, description: result.description});
+    res.render('new', {title: result.name + ' Info', formTitle: "edit restaurant"});
   });
 });
 
 router.post('/edit/:id', function(req, res) {
-  getZagat().where('id', req.params.id).update(req.body).then(function(result) {
+  getZagat().where('id', req.params.id).update(req.body).then(function(result){
     res.redirect('/')
   });
 });
@@ -62,5 +62,11 @@ router.get('/:id/delete', function (req, res) {
     res.redirect('/');
   })
 })
+
+router.get('/edit/', function(req, res) {
+  res.render('/');
+})
+
+
 
 module.exports = router;

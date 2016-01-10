@@ -4,7 +4,7 @@ block content
   if zagat
   div.container
     div.header
-      p= zagat.name
+      p.title= zagat.name
     div.main
       div.left
         img.show(src="/images/" + zagat.image)
@@ -12,11 +12,11 @@ block content
         p= zagat.type + ' Cuisine'
         p= 'Located in ' + zagat.location + ', ' + zagat.state
         if zagat.description
-          p= zagat.description
+          p.describe= zagat.description
         else 
-          p= 'No Description Available'
+          p.describe= 'No Description Available'
         p.rating Rating:
         -for(var i=0; i<zagat.rating; i++) 
           img.star(src="/images/star.png")
-        a(href="/edit/"+ zagat.id).edit Edit
-        a(href= '/' + zagat.id + "/delete").delete Delete
+        a(href="/edit/"+ zagat.id).cancel.edit Edit
+        a(href= '/' + zagat.id + "/delete").cancel.delete Delete

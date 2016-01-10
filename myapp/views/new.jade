@@ -5,20 +5,19 @@ block content
   div.container
     div.header
       p.title.leftier #{title}
-    fieldset.newform(method='POST')
-      legend #{formTitle}
+    form.newform(method='post')
+      p #{formTitle}
       div.form-group
         label(for="name") Name
-        input.form-control(type="text" name="name" id="name" placeholder="" value="#{name}")
+        input.form-control(type="text" name="name" id="name" placeholder="" value="")
       div.form-group
         label(for="location") Location
-        input.form-control(type="text" name="location" id="location" placeholder="" value="#{location}")
+        input.form-control(type="text" name="location" id="location" placeholder="" value="")
       div.form-group.colorme
         select.dropdown(type="select" name="state" id="state")
-          option #{state}
           option(value="AL") AL
           option(value="AK") AK
-          option(value="AZ") AZ
+          option(value="AZ") AZ            
           option(value="AR") AR
           option(value="CA") CA
           option(value="CO") CO
@@ -28,13 +27,13 @@ block content
           option(value="FL") FL
           option(value="GA") GA
           option(value="HI") HI
-          option(value="ID") ID
+          option(value="ID") ID            
           option(value="IL") IL
           option(value="IN") IN
           option(value="IA") IA
           option(value="KS") KS
           option(value="KY") KY
-          option(value="LA") LA
+          option(value="LA") LA            
           option(value="ME") ME
           option(value="MD") MD
           option(value="MA") MA
@@ -70,7 +69,6 @@ block content
       div.form-group 
         label(for="type") Cuisine
         select.dropdown.cuisine(type="select" name="type" id="type")
-          option #{type}
           option(value="Mexican") Mexican
           option(value="Thai") Thai
           option(value="American") American
@@ -78,7 +76,7 @@ block content
           option(value="Italian") Italian
       div.form-group.radio
         label.radiolabel(for="rating") Rating 
-          input(type="radio" name="rating" value="1" checked="#{rating}")
+          input(type="radio" name="rating" value="1")
       div.form-group.radio
         input(type="radio" name="rating" value="2")
       div.form-group.radio
@@ -89,8 +87,9 @@ block content
         input(type="radio" name="rating" value="4")
       div.form-group
         label.image(for="image") Image 
-        input.image(type="text" name="image" value="#{image}")
+        input.image(type="text" name="image")
       div.form-group.radio
         textarea.form-control(rows="5" name="description" id='description' placeholder="") #{description}
-      a(href="/").cancel Cancel
-      button.submit(type="submit") Submit
+      div.buttoni
+        button.submit(type="submit") Submit
+        a(href="/").cancel Cancel

@@ -133,24 +133,39 @@ label {
   margin-left: 20px;
 }
 
-.submit{
-  float: right;
+.submit {
   margin-right: 5px;
   background: #7EC479;
   border: none;
   border-radius: 5px;
   padding: 5px 20px;
+  display: flex;
+  display: inline-block;
+  height: 30px;
+  width: 80px;
+}
+
+.buttoni {
+  display: flex;
+  float: right;
+  height: 100px;
+  width: 200px;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .cancel {
-  float: right;
+  display: flex;
   margin-right: 5px;
   background: #F06C53;
   text-decoration: none;
-  padding: 5px 20px;
   border-radius: 5px;
   color: black;
   font-size: 11px;
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  padding: 5px 20px;
 }
 
 .image {
@@ -171,6 +186,10 @@ label {
 
 /***********SHOW PAGE***************/
 
+.main {
+  margin-top: 50px;
+}
+
 .left{
   display: flex;
   width: 50%;
@@ -178,6 +197,11 @@ label {
   height: 80vh;
   justify-content: center;
   align-items: center;
+}
+
+.show {
+  height: 400px;
+  width: 400px;
 }
 
 .right {
@@ -190,19 +214,23 @@ label {
   display: block;
 }
 
-.show {
-  height: 400px;
-  width: 400px;
+.describe, .rating {
+  margin-top: 80px;
 }
 
 .edit {
-  padding: 10px;
+  background-color: #7EC479;
+  text-align: center;
 }
 
 .delete {
-  padding: 10px;
+  text-align: center;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+button {
+  outline: none;
 }
