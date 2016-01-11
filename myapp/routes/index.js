@@ -21,7 +21,7 @@ router.get('/new', function(req, res){
   res.render('new', {title: 'New Restaurant', formTitle: 'create restaurant'});
 })
 
-// pulls everything into index page
+
 router.post('/', function(req, res){
   var items = {
     name: req.body.name,
@@ -49,11 +49,6 @@ router.get('/edit/:id', function(req, res){
   });
 });
 
-router.get('/new/:id', function(req, res){
-  getZagat().where('id', req.params.id).first().then(function(result){
-    res.render('new', {title: result.name + ' Info', formTitle: "edit restaurant", zagat: result});
-  });
-});
 
 router.post('/edit/:id', function(req, res) {
   getZagat().where('id', req.params.id).update(req.body).then(function(result){
@@ -67,13 +62,6 @@ router.get('/:id/delete', function (req, res) {
   })
 })
 
-// router.get('/edit/', function(req, res) {
-//   res.render('/');
-// })
-
-// router.post('/', function(req, res, next){
-//   res.redirect('/')
-// });
 
 
 

@@ -13,7 +13,7 @@ block content
           div.box
             p
               a.name(href='/show/' + item.id)= item.name
-            img.foodgroups(src="images/" + item.image)
+            img.foodgroups(src= item.image)
             p.type= item.type + " Cuisine"
             p.location= item.location + ", " + item.state
             -for(var i=0; i<item.rating; i++) 
