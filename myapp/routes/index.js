@@ -62,6 +62,9 @@ router.get('/:id/delete', function (req, res) {
   })
 })
 
+router.get('/admin', function(req, res){
+  res.render('admin')
+})
 
 
 
