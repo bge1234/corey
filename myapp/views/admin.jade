@@ -3,4 +3,16 @@ extends layout
 block content
 
   h1 admin page 
-    h2 Showing all restaurants
+    h2 Employees By restarant. Click restaurant name to add employee
+      
+    if zagat
+      for item in zagat  
+        a(href='/new_employee/' + item.id)= item.name
+        for employee in employees
+          if(employee.zagat_id === item.id)
+            p=employee.first_name  +  employee.last_name  
+           
+  a(href='/') Home            
+      
+          
+            

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+
+h1 here is some sutff 
+
+
+  for rider in payload
+    p=rider['first_name'] // name
+      ul
+        for obj in payload    //
+          if obj['id'] == rider['rider_id']
+            li=obj['name']  
+                    //first_name

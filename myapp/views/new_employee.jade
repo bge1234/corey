@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  if zagat
+  div.container
+    div.header
+      p.title= "Add employee for " + zagat.name
+      a(href ='/').gohome Home   
+      a(href='/admin').gohome Admin tools
+    fieldset
+      legend New employee
+      form.newform(action'/new_employee/'+zagat.id method='post')
+        div.form-group
+          label(for="first_name") First Name
+          input.form-control(type="text" name="first_name")
+        div.form-group
+          label(for="last_name") Last Name
+          input.form-control(type="text" name="last_name")
+        div.buttoni
+          button.submit(type="submit") Submit
+          a(href="/admin").cancel Cancel
