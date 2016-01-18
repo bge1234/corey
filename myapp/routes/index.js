@@ -94,6 +94,12 @@ router.post('/new_employee/:id', function(req, res){
 
 })
 
+router.get('/delete_employee/:id', function(req, res){
+  getEmployees().where('id', req.params.id).del().then(function(result){
+    res.redirect('/admin')
+  })
+});
+
 
 
 

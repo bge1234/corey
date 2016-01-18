@@ -3,16 +3,18 @@ extends layout
 block content
 
   h1 admin page 
-    h2 Employees By restarant. Click restaurant name to add employee
-      
+    h2 Employees By restarant. Click restaurant name to add employee, Click employee name to delete employee.
+  div.employees_list  
     if zagat
       for item in zagat  
-        a(href='/new_employee/' + item.id)= item.name
+        a.restaurant_name(href='/new_employee/' + item.id)= item.name 
+        br
         for employee in employees
           if(employee.zagat_id === item.id)
-            p=employee.first_name  +  employee.last_name  
+            a(href='/delete_employee/'+ employee.id onClick="javascript:confirm('Warning: continuing will delete all employee data')")= employee.first_name + employee.last_name
+            br
            
-  a(href='/') Home            
+    a(href='/') Home            
       
           
             

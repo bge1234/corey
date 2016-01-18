@@ -243,3 +243,11 @@ button {
   color: white;
   float: right;
 }
+
+.employees_list{
+  font-size: 20px;
+  line-height: 40px;
+}
+.restaurant_name{
+  font-size: 40px;
+}
