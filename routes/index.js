@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var knex = require('knex')({
     client: 'pg',
-    connection: 'postgres://localhost/restaurants'
+    connection: process.env.DATABASE_URL || 'postgres://localhost/restaurants'
 });
 
 function getZagat() {
