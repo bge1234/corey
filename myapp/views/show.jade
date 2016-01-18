@@ -21,4 +21,4 @@ block content
           -for(var i=0; i<zagat.rating; i++) 
              img.starshow(src="/images/star.png")
         a(href="/edit/"+ zagat.id).cancel.edit Edit
-        a(href= '/' + zagat.id + "/delete").cancel.delete Delete
+        a(href= '/' + zagat.id + "/delete" onClick="javascript:confirm('Warning, Deleting will erase all restarant data permanently')").cancel.delete Delete

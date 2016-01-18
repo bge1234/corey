@@ -61,7 +61,9 @@ router.post('/edit/:id', function(req, res) {
 
 router.get('/:id/delete', function (req, res) {
   getZagat().where('id', req.params.id).del().then(function (result) {
+    getEmployees().where('zagat_id', req.params.id).del().then(function(resultE){
     res.redirect('/');
+    })
   })
 })
 
